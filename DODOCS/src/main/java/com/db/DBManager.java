@@ -72,17 +72,7 @@ public class DBManager {
         jdbcTemplate = new JdbcTemplate(dataSource);
         return jdbcTemplate;
 	}
-	private JdbcTemplate mariaDBConnection()
-	{
-		SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
-        dataSource.setDriverClass(com.mysql.jdbc.Driver.class);
-        dataSource.setUsername("root");
-        dataSource.setUrl("jdbc:mysql://10.0.0.17:3306/DODOCS");
-        dataSource.setPassword("p@ssw0rd");
 
-        jdbcTemplate = new JdbcTemplate(dataSource);
-        return jdbcTemplate;
-	}
 	
 	public JdbcTemplate getJDBCTemplate()
 	{
